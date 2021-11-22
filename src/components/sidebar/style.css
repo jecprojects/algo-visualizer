@@ -1,7 +1,9 @@
 .sidebar-main-div {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 20%;
   height: 100%;
-  position: absolute;
   background-color: #1f2025;
 }
 .sidebar-main-top-div {

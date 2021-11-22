@@ -1,17 +1,22 @@
 import React from "react";
+import "./App.css";
 
-import { Route, Routes } from "react-router-dom";
+// In updated version react-router-dom changed it's implementation
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Components
 import HomeDiv from "./containers";
+import SelectionSort from "./containers/selectionSort";
 
 function App() {
   return (
     <div className="App">
-      <HomeDiv />
-      <Routes>
-        <Route exact path="/he" component={HomeDiv} />
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<HomeDiv />} />
+          <Route path="/selection-sort" element={<SelectionSort />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,14 +1,14 @@
 import React from 'react';
+import Layout from '../components/layout';
 
 // Components
-import Sidebar from '../components/sidebar/index';
 import './style.css'
 
 const HomeDiv = (props) => {
     return(
-        <div className="home-main-div">
-            <Sidebar/>
-        </div>
+        <Layout sidebar>
+            <h1 style={{color: "#ffffff"}}>Hi</h1>
+        </Layout>
     );
 }
 

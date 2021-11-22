@@ -1,0 +1,45 @@
+.body-bar {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: #17181c;
+}
+.midbar {
+  position: absolute;
+  left: 20%;
+  height: 100vh;
+  width: 80%;
+}
+.mid-lower-bar {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 4rem);
+}
+
+.mid-lower-left-bar {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  width: 55%;
+  height: 100%;
+}
+
+.universal-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 1.5rem;
+  background-color: #33353f;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.universal-footer a {
+  color: #fff;
+  font-size: 16px;
+  padding-left: 1rem;
+  margin-top: 4px;
+}
