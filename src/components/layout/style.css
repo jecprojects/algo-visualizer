@@ -1,14 +1,14 @@
 .body-bar {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   background-color: #17181c;
 }
 .midbar {
   position: absolute;
   left: 20%;
-  height: 100vh;
+  height: 100%;
   width: 80%;
 }
 .mid-lower-bar {
@@ -29,7 +29,7 @@
 .universal-footer {
   position: absolute;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   height: 1.5rem;
   background-color: #33353f;
   display: flex;

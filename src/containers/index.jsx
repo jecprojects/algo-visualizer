@@ -7,7 +7,7 @@ import './style.css'
 const HomeDiv = (props) => {
     return(
         <Layout sidebar>
-            <h1 style={{color: "#ffffff"}}>Hi</h1>
+            {/* <h1 style={{color: "#ffffff"}}>Hi</h1> */}
         </Layout>
     );
 }

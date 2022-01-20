@@ -6,7 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Components
 import HomeDiv from "./containers";
-import SelectionSort from "./containers/selectionSort";
+import SelectionSort from "./containers/selectionsort";
+import BubbleSort from "./containers/bubblesort";
+import InsertionSort from "./containers/insertionsort";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomeDiv />} />
           <Route path="/selection-sort" element={<SelectionSort />} />
+          <Route path="/insertion-sort" element={<InsertionSort />} />
+          <Route path="/bubble-sort" element={<BubbleSort />} />
         </Routes>
       </BrowserRouter>
     </div>
