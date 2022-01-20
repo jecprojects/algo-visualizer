@@ -1,7 +1,11 @@
 import React from "react";
 import './style.css';
 
+import Bubblesort from "../../core/JS/bubblesort";
+
 const CodeSection = (props) => {
+    console.log(Bubblesort)
+
     return(
         <div className="code-section-main-div">
             <div className="code-section-header">
