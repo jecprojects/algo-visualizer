@@ -7,10 +7,9 @@ import CodeSection from "../codesection";
 import VisualizeDiv from "../visualize";
 import LogsDiv from "../logsdiv";
 
+/* Styles and Icons */
 import './style.css';
-
 import {FaGithub} from 'react-icons/fa';
-import { Link } from "react-router-dom";
 
 
 const Layout = (props) => {
