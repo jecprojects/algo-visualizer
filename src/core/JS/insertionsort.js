@@ -1,5 +1,4 @@
-const code = `
-// Function to sort an array using insertion sort
+const code = `// Function to sort an array using insertion sort
 function insertionSort(arr, n) 
 { 
     let i, key, j; 

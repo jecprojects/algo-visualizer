@@ -27,17 +27,12 @@
   display: flex;
 }
 
-.code-section-body-left-div {
-  width: 3rem;
-  height: 100%;
-  background-color: #0e0f10;
-}
-
-.code-section-body-right-div {
-  width: calc(100% - 3rem);
+.code-section-body-div {
+  width: 100%;
   height: 100%;
 }
 
   .code-section{
-    color:#c5d5da
+    color:#c5d5da;
+    font-size: 13px;
   }
