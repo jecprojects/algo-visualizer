@@ -23,13 +23,13 @@ function insertionSort(arr, n)
 // Driver program to test above functions
 var arr = [64, 34, 25, 12, 22, 11, 90];
 let n = 7;
-Insertionsort(arr, n);
+insertionsort(arr, n);
 `
 
-const Insertionsort = {
+const insertionsort = {
     title: "insertionSort",
     ext: "js",
     code: code
 }
 
-export default Insertionsort;
+export default insertionsort;

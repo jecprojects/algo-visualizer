@@ -11,7 +11,15 @@
   width: 100%;
   height: 2.5rem;
   border-bottom: 2px solid #000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
 }
+  .filename-heading{
+    color: #9ca6bb;
+    font-size: 14px;
+  }
 
 .code-section-body {
   width: 100%;
@@ -29,3 +37,7 @@
   width: calc(100% - 3rem);
   height: 100%;
 }
+
+  .code-section{
+    color:#c5d5da
+  }
