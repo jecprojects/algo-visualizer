@@ -1,3 +1,5 @@
+import delay from '../delay';
+
 const code = `// Function to sort an array using insertion sort
 function insertionSort(arr, n) 
 { 
@@ -28,7 +30,10 @@ insertionsort(arr, n);
 const insertionsort = {
     title: "insertionSort",
     ext: "js",
-    code: code
+    code: code,
+    n: 7,
+    ele: [64, 34, 25, 12, 22, 11, 90],
+    delay: delay
 }
 
 export default insertionsort;

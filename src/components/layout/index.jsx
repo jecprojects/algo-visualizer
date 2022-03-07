@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 // all components
 import Sidebar from "../sidebar";
@@ -13,32 +14,35 @@ import {FaGithub} from 'react-icons/fa';
 
 
 const Layout = (props) => {
-return(
-    <>
-    {
-        props.sidebar ? 
-            <div className="body-bar">
-                <Sidebar/>
-                <div className="midbar">
-                    <Header/>
-                    <div className="mid-lower-bar">
-                        <div className="mid-lower-left-bar">
-                            <VisualizeDiv/>
-                            <LogsDiv/>
+
+    const visual = useSelector(state => state.visual);
+    
+    return(
+        <>
+        {
+            props.sidebar ? 
+                <div className="body-bar">
+                    <Sidebar/>
+                    <div className="midbar">
+                        <Header/>
+                        <div className="mid-lower-bar">
+                            <div className="mid-lower-left-bar">
+                                <VisualizeDiv/>
+                                <LogsDiv/>
+                            </div>
+                            <CodeSection/>
                         </div>
-                        <CodeSection/>
+                        {/* {props.children} */}
                     </div>
-                    {/* {props.children} */}
+                    <div className="universal-footer">
+                        <a href="https://github.com/jecprojects/algo-visualizer" target="_blank"><FaGithub/></a>
+                    </div>
                 </div>
-                <div className="universal-footer">
-                    <a href="https://github.com/jecprojects/algo-visualizer" target="_blank"><FaGithub/></a>
-                </div>
-            </div>
-            :
-            props.children
-    }
-    </>
-)
+                :
+                props.children
+        }
+        </>
+    )
 }
 
 export default Layout;

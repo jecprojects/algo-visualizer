@@ -24,4 +24,5 @@
 .visualize-main-body-div {
   width: 100%;
   height: calc(100% - 2rem);
+  padding: 2rem;
 }

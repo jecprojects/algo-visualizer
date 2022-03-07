@@ -5,7 +5,10 @@ const initState = {
     ext: null,
     code: null,
     loading: false,
-    message: null
+    message: null,
+    delay: null,
+    n: null,
+    arr: null
 };
 
 export default (state = initState, action) => {
@@ -24,7 +27,10 @@ export default (state = initState, action) => {
                 title: action.payload.title,
                 ext: action.payload.ext,
                 code: action.payload.code,
-                message: action.payload.message
+                message: action.payload.message,
+                delay: action.payload.delay,
+                arr: action.payload.arr,
+                n: action.payload.n
             };
             break;
     }
