@@ -20,6 +20,7 @@ ChartJS.register(
 );
 
 const BarChart = ({visualData}) => {
+
     
     const [bgColor, setBgColor] = useState();
     const [labels, setLabels] = useState();
@@ -49,7 +50,7 @@ const BarChart = ({visualData}) => {
         }) 
 
         setBgColor(backgroundColor);
-    }, [])
+    }, [visualData])
     
 
     const data = {

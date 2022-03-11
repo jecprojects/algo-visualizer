@@ -1,20 +1,11 @@
 import { algoRunningConstants } from './constants';
 
 
-const delay = (ms) => {
-    const date = Date.now();
-    let currentDate = null;
-    do {
-      currentDate = Date.now();
-    } while (currentDate - date < ms);
-}
-
-
 export const bubbleSortAction = (algorithm) => {
     return dispatch => {
         const visualizeArray = [];
         function swap(arr, xp, yp){
-            var temp = arr[xp];
+            let temp = arr[xp];
             arr[xp] = arr[yp];
             arr[yp] = temp;
         }
@@ -25,11 +16,13 @@ export const bubbleSortAction = (algorithm) => {
                 for (j = 0; j < n-i-1; j++){
                     if (arr[j] > arr[j+1]){
                         swap(arr, j, j+1);
+                        let cArray = [...arr];
+                        console.log(cArray);
                         visualizeArray.push({
-                            arr, 
+                            arr: cArray, 
                             swap:[arr[j], arr[j+1]],
                             i: i,
-                            j: j
+                            j: j,
                         })
                     }
                 }

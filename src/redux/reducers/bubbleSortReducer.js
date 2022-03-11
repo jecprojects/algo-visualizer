@@ -3,7 +3,7 @@ import { algoRunningConstants } from "../actions/constants";
 const initState = {
     visualizeArray: null,
     running: false,
-    complete: false
+    complete: false,
 };
 
 export default (state = initState, action) => {

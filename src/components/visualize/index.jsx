@@ -1,4 +1,6 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import BarChart from "../barchart";
 
@@ -6,7 +8,21 @@ import BarChart from "../barchart";
 import './style.css';
 
 const VisualizeDiv = (props) => {
+
     const visual = useSelector(state => state.visual);
+    const [currentVisuals, setCurrentVisuals] = useState();
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        if(visual.complete){
+            setTimeout(() => {
+                setCurrentVisuals(visual.visualizeArray[count]);
+                if(count < visual.visualizeArray.length){
+                    setCount(prev => prev+1)
+                }
+            }, 1000);
+        }
+    }, [count, visual.complete])
 
     return(
         <div className="visualize-main-div">
@@ -17,13 +33,14 @@ const VisualizeDiv = (props) => {
                 </div>
             </div>
 
-            <div className="visualize-main-body-div">
-                {/* Logs goes here */}
+            <div id="renderingDiv" className="visualize-main-body-div">
                 {
-                    visual.complete ? 
-                        <BarChart visualData={visual.visualizeArray[0]}/>
+                    currentVisuals ? 
+                        <BarChart visualData={currentVisuals}/>
                         :
-                        null
+                        <div className='replacement-of-visuals'>
+                            Hello
+                        </div>
                 }
             </div>
         </div>
