@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 // Actions
 import { bubbleSortAction } from "../../redux/actions/bubbleSortAction";
 // ICONS
-import { FiPlay } from 'react-icons/fi';
+import { FiPlay, FiPause, FiRefreshCcw } from 'react-icons/fi';
 // styling File
 import './style.css';
 
@@ -14,10 +14,13 @@ const Header = () => {
 
     // Getting the current location from browser url
     const location = useLocation();
-    const algorithm = useSelector(state => state.algorithm);
     const dispatch = useDispatch();
 
-    const [algorithmSelected, setAlgorithmSelected] = useState();
+    const algorithm = useSelector(state => state.algorithm);
+    const visual = useSelector(state => state.visual);
+
+    const [ algorithmSelected, setAlgorithmSelected ] = useState();
+    const [ played, isPlayed ] = useState();
 
     // This will select the Algorithm name to put it into the header.
     const headingLabel = () => {
@@ -27,31 +30,49 @@ const Header = () => {
         else return "Select algorithm to Visualize."
     }
 
+    // To select the algorithm Name
     useEffect(() => {
-        const algorithm = headingLabel();
-        setAlgorithmSelected(algorithm);
+        const algoName = headingLabel();
+        setAlgorithmSelected(algoName);
     }, [algorithmSelected]);
 
-    
-
+    // To manage played state
+    useEffect(() => {
+        if(visual.complete){
+            isPlayed(true)
+        }else{
+            isPlayed(false)
+        }
+    }, [visual.complete])
 
     // This will select the algorithm and proceed further to visualize
     const playAlgorithm = () => {
         if(algorithm.title){
-            dispatch(bubbleSortAction(algorithm))
+            dispatch(bubbleSortAction(algorithm, played))
+            isPlayed(!played)
         }else{
             alert('Please select an Algorithm to RUN')
         }
+    }
+
+    const reloadPage = () => {
+        window.location.reload();
     }
 
     return(
         <div className="header-main-div">
             <label className="heading-lbl">{algorithmSelected ? algorithmSelected : 'Loading..'}</label>
             {
-                algorithm.title ? 
-                <div onClick={playAlgorithm} className="run-btn-div">
-                    <span className="run-btn"><FiPlay/></span>
-                    <label>PLAY</label>
+                algorithm.title ?
+                <div className="heading-right-div">
+                    <div onClick={reloadPage} className="run-btn-div">
+                        <span className="run-btn"><FiRefreshCcw/></span>
+                        <label>RELOAD</label>
+                    </div>
+                    <div onClick={playAlgorithm} id='run-btn' className="run-btn-div">
+                        <span className="run-btn"> {played ? <FiPause/> : <FiPlay/>}</span>
+                        <label>{played ? 'PAUSE' : 'PLAY'}</label>
+                    </div>
                 </div>
                 :
                 null

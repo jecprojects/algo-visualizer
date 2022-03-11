@@ -25,4 +25,5 @@
   width: 100%;
   height: calc(100% - 2rem);
   padding: 2rem;
+  overflow-y: scroll;
 }

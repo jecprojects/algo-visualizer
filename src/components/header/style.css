@@ -13,7 +13,10 @@
   color: #fff;
   font-size: 24px;
 }
-
+.heading-right-div{
+  display: flex;
+  gap: 1rem;
+}
 .run-btn-div{
   color: #fff;
   border: 1px solid #ffffff8c;

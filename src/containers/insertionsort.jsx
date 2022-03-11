@@ -9,7 +9,6 @@ import { useLocation } from 'react-router-dom';
 
 const InsertionSort = () => {
     const location = useLocation();
-    console.log(location.pathname)
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -17,9 +16,7 @@ const InsertionSort = () => {
     }, [location])
 
     return(
-        <Layout sidebar>
-            Hello Insertion Srt
-        </Layout>
+        <Layout sidebar></Layout>
     );
 }
 

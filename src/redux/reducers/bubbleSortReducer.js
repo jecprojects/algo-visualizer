@@ -8,12 +8,6 @@ const initState = {
 
 export default (state = initState, action) => {
     switch(action.type){
-        case algoRunningConstants.ALGO_BUBBLE_SORT_RUNNING:
-            state = {
-                ...state,
-                running: action.payload.running
-            };
-        break;
         case algoRunningConstants.ALGO_BUBBLE_SORT_COMPLETE:
             state = {
                 ...state,

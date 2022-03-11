@@ -17,9 +17,7 @@ const BubbleSort = () => {
     }, [location])
 
     return(
-        <Layout sidebar>
-            Hello Bubble Srt
-        </Layout>
+        <Layout sidebar></Layout>
     );
 }
 

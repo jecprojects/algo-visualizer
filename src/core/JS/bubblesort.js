@@ -1,4 +1,5 @@
-import delay from '../delay';
+let arr = [6, 3, 2, 9, 1, 8, 4, 11, 5, 10, 7];
+let n = 11;
 
 const code = `// Bubble Sort Algortihm
 function swap(arr, xp, yp){
@@ -19,20 +20,18 @@ function bubbleSort(arr, n){
     }
 }
 
-let arr = [64, 34, 25, 12, 22, 11, 90];
-let n = 7;
+let arr = [${arr}];
+let n = ${n};
 //step
 
 bubbleSort(arr, n);
 `
-let arr = [64, 34, 25, 12, 22, 11, 90];
-let n = 7;
+
 
 const bubblesort = {
     title: "bubbleSort",
     ext: "js",
     code: code,
-    delay: delay,
     arr: arr,
     n: n
 }
