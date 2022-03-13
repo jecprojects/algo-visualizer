@@ -1,5 +1,5 @@
-let arr = [6, 3, 2, 9, 1, 8, 4, 11, 5, 10, 7];
-let n = 11;
+let arr = [6, 3, 2, 1, 8, 4, 5, 7];
+let n = 8;
 
 const code = `// Selection Sort Algorithm
 function swap(arr,xp, yp)

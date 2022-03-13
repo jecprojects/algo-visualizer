@@ -4,8 +4,6 @@ import React, { useEffect, useRef, useState} from "react";
 import { useCodeMirror } from '@uiw/react-codemirror';
 import { javascript } from '@codemirror/lang-javascript';
 import { oneDark } from '@codemirror/theme-one-dark';
-
-
 // Redux modules
 import { useSelector } from "react-redux";
 // styles
@@ -51,7 +49,7 @@ const CodeSection = () => {
             <div className="code-section-header">
                 {/* Header part Goes Here */}
                 <label className="filename-heading">
-                    {algorithm.title ? algorithm.title : 'algorithm'}.{algorithm.ext ? algorithm.ext : 'ext'}
+                    {algorithm.title ? algorithm.title : 'readme'}.{algorithm.ext ? algorithm.ext : 'js'}
                 </label>
             </div>
 

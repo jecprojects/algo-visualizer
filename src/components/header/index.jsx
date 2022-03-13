@@ -4,6 +4,10 @@ import { useSelector, useDispatch } from "react-redux";
 
 // Actions
 import { bubbleSortAction } from "../../redux/actions/bubbleSortAction";
+import { selectionSortAction } from "../../redux/actions/selectionSortAction";
+import { insertionSortAction } from "../../redux/actions/insertionSortAction";
+
+
 // ICONS
 import { FiPlay, FiPause, FiRefreshCcw } from 'react-icons/fi';
 // styling File
@@ -47,8 +51,14 @@ const Header = () => {
 
     // This will select the algorithm and proceed further to visualize
     const playAlgorithm = () => {
-        if(algorithm.title){
+        if(algorithm.title === 'bubbleSort'){
             dispatch(bubbleSortAction(algorithm, played))
+            isPlayed(!played)
+        }else if(algorithm.title === 'selectionsort'){
+            dispatch(selectionSortAction(algorithm, played))
+            isPlayed(!played)
+        }else if(algorithm.title === 'insertionSort'){
+            dispatch(insertionSortAction(algorithm, played))
             isPlayed(!played)
         }else{
             alert('Please select an Algorithm to RUN')

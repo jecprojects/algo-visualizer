@@ -1,3 +1,5 @@
+let arr = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+let n = 9;
 
 const code = `// Function to sort an array using insertion sort
 function insertionSort(arr, n) 
@@ -21,8 +23,8 @@ function insertionSort(arr, n)
 } 
   
 // Driver program to test above functions
-var arr = [64, 34, 25, 12, 22, 11, 90];
-let n = 7;
+let arr = [${arr}];
+let n = ${n};
 insertionsort(arr, n);
 `
 
@@ -30,8 +32,8 @@ const insertionsort = {
     title: "insertionSort",
     ext: "js",
     code: code,
-    n: 7,
-    ele: [64, 34, 25, 12, 22, 11, 90],
+    arr: arr,
+    n: n
 }
 
 export default insertionsort;

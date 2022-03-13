@@ -31,11 +31,30 @@ export const bubbleSortAction = (algorithm, played) => {
                 let i, j;
                 for (i = 0; i < n-1; i++){
                     for (j = 0; j < n-i-1; j++){
+
+                        let cArray1 = [...arr];
+                        visualizeArray.push({
+                            arr: cArray1, 
+                            ele:[arr[j], arr[j+1]],
+                            i: i,
+                            j: j,
+                        })
+
                         if (arr[j] > arr[j+1]){
-                            swap(arr, j, j+1);
-                            let cArray = [...arr];
+
+                            let cArray2 = [...arr];
                             visualizeArray.push({
-                                arr: cArray, 
+                                arr: cArray2, 
+                                ele:[arr[j], arr[j+1]],
+                                i: i,
+                                j: j,
+                            })
+
+                            swap(arr, j, j+1);
+
+                            let cArray3 = [...arr];
+                            visualizeArray.push({
+                                arr: cArray3, 
                                 swap:[arr[j], arr[j+1]],
                                 i: i,
                                 j: j,

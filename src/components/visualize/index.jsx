@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
+// Theories
 import BubbleSortTheory from "../../core/JSTheory/bubblesortTheory";
+import InsertionSortTheory from "../../core/JSTheory/insertionsortTheory";
+import SelectionSortTheory from "../../core/JSTheory/selectionsortTheory";
+import AlgorithmTheory from '../../core/JSTheory/algorithmTheory';
+// Bar Chart
 import BarChart from "../barchart";
 
 // Styles
@@ -23,7 +28,7 @@ const VisualizeDiv = (props) => {
                 if(count < visual.visualizeArray.length-1){
                     setCount(prev => prev+1)
                 }
-            }, 1011);
+            }, 1010);
         }
     }, [count, visual.complete])
 
@@ -33,6 +38,17 @@ const VisualizeDiv = (props) => {
                 return <BubbleSortTheory/>
             break;
 
+            case '/selection-sort':
+                return <SelectionSortTheory/>
+            break;
+
+            case '/insertion-sort':
+                return <InsertionSortTheory/>
+            break;
+
+            default: 
+                return <AlgorithmTheory/>
+            break;
         }
     }
     return(

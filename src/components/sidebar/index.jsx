@@ -22,7 +22,7 @@ const Sidebar = (props) => {
 
       <div className="sidebar-contents">
         <div onClick={e => setBruteForce(!bruteForce)} className="sidebar-individua-content">
-          <label>Brute Force</label>
+          <label>Sorting Algorithm</label>
           { bruteForce ? <span><FiChevronDown/></span> : <span><FiChevronRight/></span> }
         </div>
 
@@ -76,17 +76,6 @@ const Sidebar = (props) => {
           { divideAndC ? <span><FiChevronDown/></span> : <span><FiChevronRight/></span> }
         </div>
 
-        <div className="sidebar-individua-sub-content-main-div">
-          {
-            divideAndC ? 
-            <div className="sidebar-individua-sub-content">
-              <label>Dijkstra’s shortest path</label>
-            </div>
-            :
-            null
-          }
-
-        </div>
       </div>
 
     </div>

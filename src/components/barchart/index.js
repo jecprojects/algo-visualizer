@@ -26,6 +26,9 @@ const BarChart = ({visualData}) => {
     const [labels, setLabels] = useState();
 
     const options = {
+        animation: {
+            duration: 300, // general animation time
+        },
         responsive: true,
         plugins: {
           legend: {
@@ -44,10 +47,24 @@ const BarChart = ({visualData}) => {
         setLabels(visualData.arr);
         const backgroundColor = [];
 
-        visualData.arr.map(ele => {
-            if(visualData.swap.includes(ele)) backgroundColor.push('#0a8c96');
+        visualData.arr.map((ele, index) => {
+          // if(index === visualData.i || index === visualData.j){
+          //   backgroundColor.push('#9900cc');
+          // }else{
+          //   backgroundColor.push('#c5b6c6');
+          // }
+          if(visualData.min_idx && index === visualData.min_idx){
+            backgroundColor.push('#9900cc')
+          }else if(visualData.key && index === visualData.key){
+            backgroundColor.push('red')
+          }else{
+            if(visualData.swap && visualData.swap.includes(ele)) backgroundColor.push('red');
+            else if(visualData.ele &&  visualData.ele.includes(ele)) backgroundColor.push('#9900cc')
             else backgroundColor.push('#c5b6c6')
+          }
+
         }) 
+        
 
         setBgColor(backgroundColor);
     }, [visualData])
@@ -57,7 +74,7 @@ const BarChart = ({visualData}) => {
         labels,
         datasets: [
             {
-                label: 'Element',
+                label: 'swap elements',
                 data: labels,
                 backgroundColor: bgColor,
             },
