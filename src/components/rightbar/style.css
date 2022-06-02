@@ -1,0 +1,55 @@
+.right-sidebar-main-div{
+    width: 30%;
+    height: 100%;
+    background-color: #1f2025;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+}
+.link-heading-div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.4rem;
+}
+.link-heading-div h2{
+    color: #b4b4b4;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+}
+.link-heading-div span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+.yt-videos{
+    margin-top: 2rem;
+}
+.secondary-link{
+    margin-top: 2rem;
+}
+
+.related-links{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 0.5rem;
+}
+.related-links a{
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #94BAD7;
+}
+.related-links a:hover{
+    color: #0078D4;
+    text-decoration: underline;
+}

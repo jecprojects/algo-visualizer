@@ -6,37 +6,23 @@
   justify-content: space-between;
   align-items: center;
   padding-left: 10px;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .heading-lbl{
   color: #fff;
   font-size: 24px;
 }
-.heading-right-div{
-  display: flex;
-  gap: 1rem;
-}
-.run-btn-div{
-  color: #fff;
-  border: 1px solid #ffffff8c;
-  padding: 0.4rem 0.8rem;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.1s;
-}
-.run-btn-div:hover{
-  background-color: #fff;
-  color: #000;
-}
-.run-btn-div label{
-  cursor: pointer;
-  font-size: 0.8rem;
-}
 
-.run-btn{
-  font-size: 1rem;
-  margin: 0.2rem 0.5rem 0 0;
+.header-main-div h2{
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  background: -webkit-linear-gradient(45deg, #0078d4, #199be2, #35c1f1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

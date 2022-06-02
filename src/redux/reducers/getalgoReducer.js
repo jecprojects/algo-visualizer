@@ -1,37 +1,26 @@
 import { algorithmConstants } from "../actions/constants";
 
-const initState = {
-    title: null,
-    ext: null,
-    code: null,
-    loading: false,
-    message: null,
-    n: null,
-    arr: null
-};
+const initState = { algoName: null, message: null };
 
 export default (state = initState, action) => {
+
     switch(action.type){
         case algorithmConstants.GET_SORTING_ALGORITHM_REQUEST:
             state = {
                 ...state,
-                loading: true
+                message: action.payload.message
             };
             break;
         
         case algorithmConstants.GET_SORTING_ALGORITHM_SUCCESS:
             state = {
                 ...state,
-                loading: false,
-                title: action.payload.title,
-                ext: action.payload.ext,
-                code: action.payload.code,
-                message: action.payload.message,
-                arr: action.payload.arr,
-                n: action.payload.n
+                algoName: action.payload.algorithm,
+                message: action.payload.message
             };
             break;
     }
 
     return state;
+
 }

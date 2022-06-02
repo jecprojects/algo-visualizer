@@ -4,7 +4,7 @@ import "./style.css";
 import { FiChevronDown, FiChevronRight } from 'react-icons/fi'; 
 import { NavLink, useLocation } from "react-router-dom";
 
-const Sidebar = (props) => {
+const LeftBar = (props) => {
 
   const location = useLocation()
 
@@ -16,9 +16,6 @@ const Sidebar = (props) => {
 
   return (
     <div className="sidebar-main-div">
-      <div className="sidebar-main-top-div">
-        <h2>Visualizer</h2>
-      </div>
 
       <div className="sidebar-contents">
         <div onClick={e => setBruteForce(!bruteForce)} className="sidebar-individua-content">
@@ -53,7 +50,6 @@ const Sidebar = (props) => {
               {/* For Insertion Tab */}
               <div className="sidebar-individua-sub-content">
                 <NavLink
-                  className="nav-link" 
                   className={selectedAlgo === "/insertion-sort" ? "selected" : "nav-link"}
                   to={"/insertion-sort"}>
                     Insertion Sort
@@ -82,4 +78,4 @@ const Sidebar = (props) => {
   );
 };
 
-export default Sidebar;
+export default LeftBar;
