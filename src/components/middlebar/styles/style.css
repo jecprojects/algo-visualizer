@@ -1,0 +1,35 @@
+.middlebar-main-div{
+    position: relative;
+    width: 48%;
+    height: auto;
+    padding: 1rem;
+    border: 3px dashed #292B31;
+    border-radius: 10px;
+}
+.middlebar-main-div span{
+    position: absolute;
+    padding: 4px 8px;
+    right: 1rem;
+    top: -1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #22252c;
+    color: #767e91;
+    user-select: none;
+}
+.goback-btn{
+    position: absolute;
+    padding: 4px 8px;
+    left: 1rem;
+    top: -1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #34373f;
+    color: #767e91;
+    user-select: none;
+    cursor: pointer;
+}

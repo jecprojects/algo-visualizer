@@ -1,0 +1,69 @@
+.outPut-tab{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+.visual-section{
+    width: 100%;
+    height: 60%;
+}
+.visual-control-div{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.status-showing-div{
+    width: 100%;
+    height: 5rem;
+    background: #1D1F24;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.status-showing-div label{
+    color: #6c7383;
+    font-family: "Poppins", sans-serif;
+}
+.status-control-div{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+    user-select: none;
+}
+.arrow, .step-count{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow{
+    background: #1D1F24;
+    border-radius: 8px;
+    color: rgb(122, 140, 155);
+    font-size: 24px;
+    cursor: pointer;
+}
+.arrow:hover{
+    background: #2d313b;
+
+}
+.step-count{
+    width: 8rem;
+    color: #6c7383;
+    line-height: 28px;
+    text-align:center;
+    font-family: "Poppins", sans-serif;
+}
+.step-count h3{
+    font-size: 24px;
+    font-weight: 300;
+}

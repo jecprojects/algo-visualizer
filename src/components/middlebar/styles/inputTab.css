@@ -1,0 +1,76 @@
+.arr-size-select, .arr-type-select, .buttons-div{
+    width: 100%;
+    padding-left: 1rem;
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+.arr-type-select{
+    margin-top: 1rem;
+}
+
+.in-title{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    color: #c6d2ee;
+}
+
+.select-input, .arr-input{
+    padding: 8px 12px;
+    background-color: #34373f;
+    border: none;
+    border-radius: 10px;
+    color: #c6d2ee;
+    font-family: "Poppins", sans-serif;
+    font-style: bold;
+}
+
+.arr-input{
+    width: 60%;
+}
+
+.run-btn{
+    display: flex;
+    align-items: center;
+    padding: 10px 2rem;
+    background: rgba(88, 250, 105, 0.15);
+    border: none;
+    border-radius: 8px;
+    color: #A9FAB1;
+    cursor: pointer;
+    text-align: center;
+}
+.run-btn:hover{
+    background: rgba(16, 241, 39, 0.15);
+}
+
+.reset-btn{
+    display: flex;
+    align-items: center;
+    padding: 10px 1rem;
+    border-radius: 8px;
+    color: #D1DDE6;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+.reset-btn:hover{
+    background-color: #2e3341;
+}
+
+.helping-text{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 2rem 3rem;
+    margin-top: 3rem;
+}
+.helping-text label{
+    color: #6c7383;
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    user-select: none;
+}
