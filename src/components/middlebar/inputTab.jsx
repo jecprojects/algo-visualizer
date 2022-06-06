@@ -1,22 +1,51 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { getArrayValuesAction } from '../../redux/actions/getArrayValues';
 // CSS
 import './styles/inputTab.css';
 
 
 const InputTab = (props) => {
+
+    const dispatch = useDispatch();
+
     const [arrSize, setArrSize] = useState(0);
     const [arrLayout, setArrLayout] = useState('');
     const [arrValues, setArrValues] = useState('');
     const [resetClicked, setResetClicked] = useState(0);
+    const [messageOnError, setMessageOnError] = useState(null);
 
     useEffect(() => {
         setArrSize(0);
         setArrLayout('');
         setArrValues('');
+        setMessageOnError(null);
     },[resetClicked])   
 
-    const runHandler = () => { // Function to go to the Output Tab
-        props.toggleTab();
+    const runHandler = () => { // Function to check and filter the values and go to the Output Tab
+        if(arrSize === 0){
+            setMessageOnError('Enter valid array size!');
+        }else if(arrLayout === ''){
+            setMessageOnError('Select Layout Type!')
+        }else if(arrValues === ''){
+            setMessageOnError('Enter array values!')
+        }else{
+            // If all the inputs are ok time to verify and filter the input
+            const result = arrValues.split(',').map(i => Number(i)); // Getting the number array.
+
+            if(result.length != arrSize){
+                setMessageOnError(`Enter ${arrSize} number of values!`);
+            }else{ // After all check time to dispatch the values to store
+                console.log(result);
+                const obj = {
+                    size: arrSize,
+                    layout: arrLayout,
+                    values: result
+                }
+                dispatch(getArrayValuesAction(obj))
+                props.toggleTab();
+            }
+        }
     }
 
     return(
@@ -44,7 +73,8 @@ const InputTab = (props) => {
                     value={arrLayout}
                     onChange={e => setArrLayout(e.target.value)}
                 >
-                    <option value={'BAR'}>Bar</option>
+                    <option value={''}>Select</option>
+                    {/* <option value={'BAR'}>Bar</option> */}
                     <option value={'ARRAY'}>Array</option>
                 </select>
             </div>
@@ -61,8 +91,15 @@ const InputTab = (props) => {
             </div>
 
             <div className="buttons-div">
-                <button onClick={runHandler} className="run-btn">Run</button>
-                <button onClick={prev => setResetClicked(prev+1)} className="reset-btn">Reset </button>
+                <div className='buttons-group'>
+                    <button onClick={runHandler} className="run-btn">Run</button>
+                    <button onClick={prev => setResetClicked(prev+1)} className="reset-btn">Reset </button>
+                </div>
+                {       
+                    messageOnError ? 
+                        <div className='error-logs'><h4>{messageOnError}</h4></div>
+                        : null
+                }
             </div>
 
 

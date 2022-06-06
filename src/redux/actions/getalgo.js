@@ -3,8 +3,6 @@ import { algorithmConstants } from "./constants";
 export const getAlgorithmAction = (algorithm) => {
     return dispatch => {
 
-        console.log(algorithm)
-        // Dispatching request
         dispatch({
             type: algorithmConstants.GET_SORTING_ALGORITHM_REQUEST,
             payload: { message: 'Getting Algorithm...' }

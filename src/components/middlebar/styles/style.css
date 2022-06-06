@@ -33,3 +33,7 @@
     user-select: none;
     cursor: pointer;
 }
+.middlebar-main-div label{
+    color: #6c7383;
+    font-family: "Poppins", sans-serif;
+}
