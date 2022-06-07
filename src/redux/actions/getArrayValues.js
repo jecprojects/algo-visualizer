@@ -6,8 +6,7 @@ export const getArrayValuesAction = (arrayData) => {
         dispatch({
             type: arrayValuesConstants.GET_ARRAY_VALUES_SUCCESS,
             payload: { 
-                success: true,
-                arrayData: arrayData 
+                arrayData: {...arrayData }
             }
         });
 

@@ -1,6 +1,6 @@
 import { arrayValuesConstants } from "../actions/constants";
 
-const initState = { data: null, success: false };
+const initState = { data: null };
 
 export default (state = initState, action) => {
 
@@ -9,8 +9,7 @@ export default (state = initState, action) => {
         case arrayValuesConstants.GET_ARRAY_VALUES_SUCCESS:
             state = {
                 ...state,
-                arrayData: action.payload.arrayData,
-                success: action.payload.success
+                data: action.payload.arrayData
             };
             break;
     }

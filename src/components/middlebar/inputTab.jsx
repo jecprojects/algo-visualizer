@@ -15,11 +15,19 @@ const InputTab = (props) => {
     const [resetClicked, setResetClicked] = useState(0);
     const [messageOnError, setMessageOnError] = useState(null);
 
-    useEffect(() => {
+    useEffect(() => {  // Resetting hook
         setArrSize(0);
         setArrLayout('');
         setArrValues('');
         setMessageOnError(null);
+
+        const obj = {
+            size: 0,
+            layout: '',
+            values: [],
+            success: false
+        }
+        dispatch(getArrayValuesAction(obj))
     },[resetClicked])   
 
     const runHandler = () => { // Function to check and filter the values and go to the Output Tab
@@ -36,11 +44,11 @@ const InputTab = (props) => {
             if(result.length != arrSize){
                 setMessageOnError(`Enter ${arrSize} number of values!`);
             }else{ // After all check time to dispatch the values to store
-                console.log(result);
                 const obj = {
                     size: arrSize,
                     layout: arrLayout,
-                    values: result
+                    values: result,
+                    success: true
                 }
                 dispatch(getArrayValuesAction(obj))
                 props.toggleTab();

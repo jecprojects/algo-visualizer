@@ -1,0 +1,20 @@
+
+.array-visuals-div{
+    display: flex;
+    width: auto;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    margin-top: 3rem;
+}
+
+.ar-ele-div{
+    width: 4rem;
+    height: 3rem;
+    background-color: #7e7c94;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
