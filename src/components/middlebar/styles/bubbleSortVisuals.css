@@ -57,7 +57,17 @@
 }
 
 .compare-divs {
-  background-color: #56c4c4;
+  background-color: #c4c262;
+  animation: colorAnim 0.3s ease-out;
+}
+
+@keyframes colorAnim {
+  0%{
+    background-color: #c4c262ee;
+  }
+  100%{
+    background-color: #c4c262;
+  }
 }
 
 .swap-ele-div {
@@ -72,7 +82,7 @@
 }
 
 .swap-divs {
-  background-color: #cac84a;
+  background-color: #c4c262;
 }
 
 .swap-divs:nth-child(1) {
@@ -92,40 +102,40 @@
 @-webkit-keyframes leftBlock {
   0% {
     left: calc(4rem + 3px);
-    background-color: #cac84a9f;
+    background-color: #c4c2628f;
   }
   100% {
     left: 0;
-    background-color: #cac84a;
+    background-color: #c4c262;
   }
 }
 
 @keyframes leftBlock {
   0% {
     left: calc(4rem + 3px);
-    background-color: #cac84a9f;
+    background-color: #c4c2628f;
   }
   100% {
     left: 0;
-    background-color: #cac84a;
+    background-color: #c4c262;
   }
 }
 
 @-webkit-keyframes rightBlock {
   0% {
     right: calc(4rem + 3px);
-    background-color: #cac84a9f;
+    background-color: #c4c2628f;
   }
   100% {
     right: 0;
-    background-color: #cac84a;
+    background-color: #c4c262;
   }
 }
 
 @keyframes rightBlock {
   0% {
     right: calc(4rem + 3px);
-    background-color: #cac84a9f;
+    background-color: #c4c2628f;
   }
   100% {
     right: 0;
@@ -134,7 +144,7 @@
 }
 
 .passIndex-divs {
-  background-color: #14d32d;
+  background-color: #5cce6b;
 }
 
 .array-indexes{

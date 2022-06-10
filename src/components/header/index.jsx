@@ -17,7 +17,7 @@ const Header = () => {
         if(location.pathname === '/bubble-sort') return "Bubble Sort";
         else if(location.pathname === '/insertion-sort') return "Insertion Sort";
         else if(location.pathname === '/selection-sort') return "Selection Sort";
-        else return "Select algorithm to Visualize."
+        else return null
     }
 
     // To select the algorithm Name
@@ -28,8 +28,7 @@ const Header = () => {
 
     return(
         <div className="header-main-div">
-            <h2>Visualizer</h2>
-            <label className="heading-lbl">{algorithmSelected ? algorithmSelected : 'Loading..'}</label>
+            <label className="heading-lbl">{algorithmSelected ? `${algorithmSelected}` : 'Algorithm Visualization'}</label>
         </div>
     );
 }

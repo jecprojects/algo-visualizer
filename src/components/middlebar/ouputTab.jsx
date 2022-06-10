@@ -36,8 +36,6 @@ const OutputTab = (props) => {
         }
     }, [currentIndex, generatedSteps.success])
 
-    // console.log(`${currentIndex}: ${currentStep}`)
-
     return(
         <div className='outPut-tab'>
             <div className='visual-section'>

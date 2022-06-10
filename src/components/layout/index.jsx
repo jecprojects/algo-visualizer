@@ -22,7 +22,6 @@ const Layout = (props) => {
             props.sidebar ? 
                 <div className="body-bar">
                     <Header/>
-                    {/* <Sidebar/> */}
                     <div className="layout-main-div">
                         <LeftBar/>
                         <MiddleBar/>

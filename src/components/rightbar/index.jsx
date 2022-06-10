@@ -55,23 +55,31 @@ const RightBar = () => {
 
     return(
         <div className="right-sidebar-main-div">
-            <div className="link-heading-div">
-                <span><FcGoogle/></span>
-                <h2>Related Links</h2>
-            </div>
+            {   
+                algorithm.algoName ? 
+                <>
+                    <div className="link-heading-div">
+                        <span><FcGoogle/></span>
+                        <h2>Related Links</h2>
+                    </div>
 
-            <div className="related-links">
-                { algorithm.algoName && renderRelatedLink() }
-            </div>
+                    <div className="related-links">
+                        { algorithm.algoName && renderRelatedLink() }
+                    </div>
 
-            <div className="link-heading-div secondary-link">
-                <span><FcStart/></span>
-                <h2>Youtube Videos</h2>
-            </div>
+                    <div className="link-heading-div secondary-link">
+                        <span><FcStart/></span>
+                        <h2>Youtube Videos</h2>
+                    </div>
 
-            <div className="related-links">
-                { algorithm.algoName && renderYoutubeLink() }
-            </div>
+                    <div className="related-links">
+                        { algorithm.algoName && renderYoutubeLink() }
+                    </div>
+                </>
+                :
+                null
+            }
+
         </div>
     );
 }

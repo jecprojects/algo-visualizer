@@ -1,9 +1,8 @@
 .sidebar-main-div {
   width: 20%;
   height: 100%;
-  background-color: #1f2025;
   padding-top: 1rem;
-  border-radius: 12px;
+  border-radius: 5px;
 }
 .sidebar-main-top-div {
   width: 100%;

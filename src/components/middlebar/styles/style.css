@@ -2,9 +2,7 @@
     position: relative;
     width: 48%;
     height: auto;
-    padding: 1rem;
-    border: 3px dashed #292B31;
-    border-radius: 10px;
+    padding: 0 1rem;
 }
 .middlebar-main-div span{
     position: absolute;
@@ -33,7 +31,8 @@
     user-select: none;
     cursor: pointer;
 }
-.middlebar-main-div label{
-    color: #6c7383;
+.m-m-label{
+    margin-top: 1.4rem;
+    color: #bebfce;
     font-family: "Poppins", sans-serif;
 }

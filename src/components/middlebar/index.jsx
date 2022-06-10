@@ -27,7 +27,7 @@ const MiddleBar = () => {
                     outputTab ? <label onClick={toggleTab} className='goback-btn'><BsChevronCompactLeft/> BACK</label> : null
                 }
                 
-                <span>{outputTab ? 'OUTPUT' : 'INPUT'}</span>
+                {/* <span>{outputTab ? 'OUTPUT' : 'INPUT'}</span> */}
                 { 
                     outputTab ? 
                         <OutputTab/> 
@@ -36,9 +36,9 @@ const MiddleBar = () => {
                 }
             </div>
             :
-            <div className="middlebar-main-div">
-                <label>Please Select an Algorithm from the Sidebar</label>
-            </div>
+            // <div className="middlebar-main-div">
+                <label className="m-m-label">Please Select an Algorithm from the Sidebar</label>
+            // </div>
     )
 }
 

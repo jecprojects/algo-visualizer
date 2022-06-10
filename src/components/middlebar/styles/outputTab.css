@@ -5,11 +5,11 @@
 }
 .visual-section{
     width: 100%;
-    height: 60%;
+    height: 50%;
 }
 .visual-control-div{
     width: 100%;
-    height: 25%;
+    height:40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,15 +18,16 @@
 .status-showing-div{
     width: 100%;
     height: 7rem;
-    background: #1D1F24;
+    background: #22252c;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem 1rem ;
+    user-select: none;
 }
 .status-showing-div label{
-    color: #6c7383;
+    color: #bebfce;
     font-family: "Poppins", sans-serif;
     text-align: center;
 }
