@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { GeneratingStepsAction } from "../../redux/actions/generatingSteps";
-import ArrayVisuals from './arrayVisuals';
+import BubbleSortVisuals from './bubbleSortVisuals';
 // CSS
 import './styles/outputTab.css';
 // ICONS
@@ -43,7 +43,7 @@ const OutputTab = (props) => {
             <div className='visual-section'>
                 {
                     currentStep ? 
-                            <ArrayVisuals 
+                            <BubbleSortVisuals 
                                 arr={currentStep.arr} 
                                 compare={currentStep.compare} 
                                 swap={currentStep.swap}
