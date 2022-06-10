@@ -15,6 +15,7 @@ export const GeneratingStepsAction = (data, algoName) => {
             case 'Bubble Sort':
 
                 let steps = [];
+                let passIndexs = [];
 
                 function swap(arr, xp, yp){
                     var temp = arr[xp];
@@ -31,14 +32,16 @@ export const GeneratingStepsAction = (data, algoName) => {
                             {
                                 arr: [...arr],
                                 text: `Starting pass ${i}`,
-                                compare: null,
-                                swap: null
+                                compare: [],
+                                swap: [],
+                                passIndexs: [...passIndexs]
                             },
                             {
                                 arr: [...arr],
                                 text: `For each element moving through the list.`,
-                                compare: null,
-                                swap: null
+                                compare: [],
+                                swap: [],
+                                passIndexs: [...passIndexs]
                             }
                         );
 
@@ -48,7 +51,8 @@ export const GeneratingStepsAction = (data, algoName) => {
                                     arr: [...arr],
                                     text: `Compare elements`,
                                     compare: [j, j+1],
-                                    swap: null
+                                    swap: [],
+                                    passIndexs: [...passIndexs]
                                 }
                             );
                             if (arr[j] > arr[j+1]){
@@ -57,23 +61,27 @@ export const GeneratingStepsAction = (data, algoName) => {
                                     {
                                         arr: [...arr],
                                         text: `Swap`,
-                                        compare: null,
-                                        swap: [j, j+1]
+                                        compare: [],
+                                        swap: [j, j+1],
+                                        passIndexs: [...passIndexs]
                                     }
                                 );
                             }
                         }
 
+                        passIndexs.push(n-i-1);
                         steps.push(
                             {
                                 arr: [...arr],
                                 text: `Done this pass. The last element processed is now
                                 is its final position`,
-                                compare: null,
-                                swap: null
+                                compare: [],
+                                swap: [],
+                                passIndexs: [...passIndexs]
                             }
                         );
                     }
+
                 }
 
                 // Driver program to test above functions
@@ -84,16 +92,18 @@ export const GeneratingStepsAction = (data, algoName) => {
                     {
                         arr: [...arr],
                         text: 'Starting bubble sort.',
-                        compare: null,
-                        swap: null
+                        compare: [],
+                        swap: [],
+                        passIndexs: [...passIndexs]
                     },
                     {
                         arr: [...arr],
                         text: `For each pass, we will move left ot right swapping adjacent
                         elements as needed. Each pass moves the next largest element into its final
                         position(these will be shown in green.)`,
-                        compare: null,
-                        swap: null
+                        compare: [],
+                        swap: [],
+                        passIndexs: [...passIndexs]
                     }
                 );
 
@@ -105,8 +115,9 @@ export const GeneratingStepsAction = (data, algoName) => {
                     {
                         arr: [...arr],
                         text: `Done sorting`,
-                        compare: null,
-                        swap: null
+                        compare: [],
+                        swap: [],
+                        passIndexs: [...passIndexs, 0]
                     }
                 );
 

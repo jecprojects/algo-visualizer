@@ -18,3 +18,12 @@
     align-items: center;
     user-select: none;
 }
+.compare-divs{
+    background-color: #4e4892;
+}
+.swap-divs{
+    background-color: #a8a76b;
+}
+.passIndex-divs{
+    background-color: rgb(20, 211, 45);
+}
