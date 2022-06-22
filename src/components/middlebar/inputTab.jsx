@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getArrayValuesAction } from '../../redux/actions/getArrayValues';
+import { resetStepAction } from '../../redux/actions/resetStepAction';
 // CSS
 import './styles/inputTab.css';
 
@@ -14,6 +15,10 @@ const InputTab = (props) => {
     const [arrValues, setArrValues] = useState('');
     const [resetClicked, setResetClicked] = useState(0);
     const [messageOnError, setMessageOnError] = useState(null);
+
+    useEffect(() => {
+        dispatch(resetStepAction());
+    },[])
 
     useEffect(() => {  // Resetting hook
         setArrSize(0);

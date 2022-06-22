@@ -11,7 +11,7 @@ const BubbleSortVisuals = (props) => {
         document.getElementById('array').innerHTML = ""; // Clearing the previous nodes
         
         let i = 0;
-        while( i<props.arr.length){
+        while(i<props.arr.length){
 
             if(props.compare && props.compare.includes(i)){ // coloring the compare divs
                 

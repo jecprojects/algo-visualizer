@@ -20,6 +20,14 @@ export default (state = initState, action) => {
                 steps: action.payload.steps
             };
             break;
+
+        case generatingStepsConstants.RESET_STEPS:
+            state={
+                ...state,
+                message: action.payload.message,
+                success: false,
+                steps: action.payload.steps
+            }
     }
 
     return state;
