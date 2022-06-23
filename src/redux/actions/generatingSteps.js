@@ -177,7 +177,7 @@ export const GeneratingStepsAction = (data, algoName) => {
                                 passIndexs: [...passIndexs]
                             }
                         );
-                        for (j = i + 1; j < n; j++){
+                        for (j = i + 1; j <= n; j++){
                             steps.push(
                                 {
                                     arr: [...arr],
@@ -287,6 +287,8 @@ export const GeneratingStepsAction = (data, algoName) => {
                 });
             }
             return;
+
+            // case ''
         }
     }
 }

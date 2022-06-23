@@ -15,10 +15,11 @@
     gap: 3px;
   }
   
-  .ss-ele-div {
+  .ss-ele-div, .eswap-big-div {
+    position: relative;
     width: auto;
     height: 3rem;
-    background-color: #14141a;
+    background-color: #17181c;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -36,7 +37,7 @@
     gap: 3px;
   }
   
-  .ss-ar-top-ele-div {
+  .ss-ar-top-ele-div, .ss-psudo-ele-div{
     width: 4rem;
     height: 3rem;
     background-color: #bebfce;
@@ -55,17 +56,91 @@
             user-select: none;
     border-radius: 5px;
   }
+  .ss-psudo-ele-div{
+    position: relative;
+    background-color: transparent !important;
+  }
+  .top-Swap-Div{
+    height: 3rem;
+    position: absolute;
+    background-color: transparent !important;
+    z-index: 2;
+  }
 
+  .ss-swap-ele:nth-child(1) {
+    position: absolute;
+    left: 0;
+    -webkit-animation: leftBlock 1s ease-out;
+            animation: leftBlock 1s ease-out;
+    
+  }
+  
+  .ss-swap-ele:nth-child(2) {
+    position: absolute;
+    right: 0;
+    -webkit-animation: rightBlock 1s ease-out;
+            animation: rightBlock 1s ease-out;
+  }
+  @-webkit-keyframes leftBlock {
+    0% {
+      left:-webkit-calc(100% - 4rem);
+      left:-moz-calc(100% - 4rem);
+      left:calc(100% - 4rem);
+      box-shadow: 4px 4px 5px  #17181c;
+    }
+    100% {
+      left: 0;
+      box-shadow: none;
+    }
+  }
+  
+  @keyframes leftBlock {
+    0% {
+      left:-webkit-calc(100% - 4rem);
+      left:-moz-calc(100% - 4rem);
+      left:calc(100% - 4rem);
+      box-shadow: 4px 4px 5px  #17181c;
+    }
+    100% {
+      left: 0;
+      box-shadow: none;
+    }
+  }
+  
+  @-webkit-keyframes rightBlock {
+    0% {
+      right:-webkit-calc(100% - 4rem);
+      right:-moz-calc(100% - 4rem);
+      right:calc(100% - 4rem);
+      box-shadow: 4px 4px 5px  #17181c;
+    }
+    100% {
+      right: 0;
+      box-shadow: none;
+    }
+  }
+  
+  @keyframes rightBlock {
+    0% {
+      right:-webkit-calc(100% - 4rem);
+      right:-moz-calc(100% - 4rem);
+      right:calc(100% - 4rem);
+      box-shadow: 4px 4px 5px  #17181c;
+    }
+    100% {
+      right: 0;
+      box-shadow: none;
+    }
+  }
   .ss-minIndx-divs{
       background-color: #e07537;
   }
   .ss-compare-divs{
     background-color: #c0966c;
   }
-  .ss-swap-divs {
-    background-color: #c4c262;
+  .ss-swap-ele-color {
+    background-color: #c4c262da;
   }
-
   .passIndex-divs {
     background-color: #5cce6b;
   }
