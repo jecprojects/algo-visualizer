@@ -4,7 +4,8 @@ import { useLocation } from "react-router-dom";
 import { GeneratingStepsAction } from "../../redux/actions/generatingSteps";
 // Algorithm Visuals
 import BubbleSortVisuals from './bubbleSortVisuals';
-import SelectionSortVisuals from './selectionSortVisuals'
+import SelectionSortVisuals from './selectionSortVisuals';
+import InsertionSortVisuals from './insertionSortVisuals';
 // CSS
 import './styles/outputTab.css';
 // ICONS
@@ -38,7 +39,13 @@ const OutputTab = (props) => {
                 break;
 
             case '/insertion-sort':
-
+                return <InsertionSortVisuals 
+                            arr={currentStep.arr} 
+                            update={currentStep.update} 
+                            toBeSwap={currentStep.toBeSwap}
+                            keyElm={currentStep.keyElm}
+                            swap={currentStep.swap}
+                        />
                 break;
 
             case '/selection-sort':
