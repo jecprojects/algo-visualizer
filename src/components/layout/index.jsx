@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useLocation } from 'react-router-dom';
 
 // all components
 import LeftBar from "../leftbar";
@@ -11,12 +11,11 @@ import Footer from "../footer/footer";
 
 /* Styles and Icons */
 import './style.css';
-import {FaGithub} from 'react-icons/fa';
 
 
 
 const Layout = (props) => {
-
+    const location = useLocation();
     
     return(
         <>
@@ -26,7 +25,12 @@ const Layout = (props) => {
                     <Header/>
                     <div className="layout-main-div">
                         <LeftBar/>
-                        <MiddleBar/>
+                        {
+                            location.pathname === 'bfs' || location.pathname === 'dfs' ?
+                            <label>Not Ready Yet!</label>
+                            :
+                            <MiddleBar/>
+                        }
                         <RightBar/>
                     </div>
                     <Footer/>

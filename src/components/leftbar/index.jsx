@@ -72,22 +72,20 @@ const LeftBar = (props) => {
 
               {/* For Bubble sort Tab */}
               <div className="sidebar-individua-sub-content">
-                <NavLink 
-                  id="bubblesort"
+                <span 
+                  onClick={() => {alert('not ready yet!')}}
                   className={selectedAlgo === "/bfs" ? "selected" : "nav-link"}
-                  to={"/bfs"}>
-                    BFS
-                </NavLink>
+                >BFS
+                </span>
               </div>
 
               {/* For Bubble Sort Tab */}
               <div className="sidebar-individua-sub-content">
-                <NavLink 
-                  to={"/dfs"}
+                <span 
+                  onClick={() => {alert('not ready yet!')}}
                   className={selectedAlgo === "/dfs" ? "selected" : "nav-link"}
-                  >
-                    DFS
-                </NavLink>
+                  >DFS
+                </span>
               </div>
             </div>
 
