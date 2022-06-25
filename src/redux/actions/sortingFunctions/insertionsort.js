@@ -16,7 +16,8 @@ const InsertionSort = (data, steps) => {
                     toBeSwap: null,
                     swap: [],
                     update: [],
-                    keyElm: key
+                    keyElm: key,
+                    sorted: false
                 }
             );
             /* Move elements of arr[0..i-1], that are 
@@ -30,7 +31,8 @@ const InsertionSort = (data, steps) => {
                         toBeSwap: null,
                         swap: [j, j+1],
                         update: [],
-                        keyElm: key
+                        keyElm: key,
+                        sorted: false
                     }
                 );
                 arr[j + 1] = arr[j]; 
@@ -41,7 +43,8 @@ const InsertionSort = (data, steps) => {
                         toBeSwap: null,
                         swap: [],
                         update: [j, j+1],
-                        keyElm: key
+                        keyElm: key,
+                        sorted: false
                     }
                 );
                 j = j - 1; 
@@ -55,7 +58,8 @@ const InsertionSort = (data, steps) => {
                     toBeSwap: j+1,
                     swap: [],
                     update: [],
-                    keyElm: key
+                    keyElm: key,
+                    sorted: false
                 }
             );
 
@@ -66,7 +70,8 @@ const InsertionSort = (data, steps) => {
                     toBeSwap: null,
                     swap: [],
                     update: [],
-                    keyElm: null
+                    keyElm: null,
+                    sorted: false
                 }
             );
         } 
@@ -83,7 +88,8 @@ const InsertionSort = (data, steps) => {
             toBeSwap: null,
             swap: [],
             update: [],
-            keyElm: null
+            keyElm: null,
+            sorted: false
         },
         {
             arr: [...arr],
@@ -91,11 +97,24 @@ const InsertionSort = (data, steps) => {
             toBeSwap: null,
             swap: [],
             update: [],
-            keyElm: null
+            keyElm: null,
+            sorted: false
         }
     );
 
     insertionSort(arr, n)
+
+    steps.push(
+        {
+            arr: [...arr],
+            text: 'Sorted.',
+            toBeSwap: null,
+            swap: [],
+            update: [],
+            keyElm: null,
+            sorted: true
+        }
+    );
 }
 
 export default InsertionSort;

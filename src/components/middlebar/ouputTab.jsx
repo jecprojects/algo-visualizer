@@ -45,6 +45,7 @@ const OutputTab = (props) => {
                             toBeSwap={currentStep.toBeSwap}
                             keyElm={currentStep.keyElm}
                             swap={currentStep.swap}
+                            sorted={currentStep.sorted}
                         />
                 break;
 

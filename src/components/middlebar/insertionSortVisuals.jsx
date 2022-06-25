@@ -113,6 +113,10 @@ const InsertionSortVisuals = (props) => {
                     eTop.classList.add('is-swap-divs')
                 }
 
+                if(props.sorted){
+                    eTop.classList.add('is-sorted')
+                }
+
                 i++
             }
         }

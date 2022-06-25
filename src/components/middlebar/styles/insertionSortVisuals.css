@@ -156,6 +156,10 @@
       margin-top: 0rem;
     }
   }
+
+  .is-sorted{
+    background-color: #36b64b;
+  }
   
   .array-indexes{
     width: 100%;
