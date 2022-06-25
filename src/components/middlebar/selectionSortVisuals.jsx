@@ -120,7 +120,7 @@ const SelectionSortVisuals = (props) => {
     return(
         <>
             <div id='ss-array' className='ss-array-visual-div'></div>
-            <div className='array-indexes'>
+            <div className='ss-array-indexes'>
                 {
                     props.arr.map((value, key) => {
                         return<div>{key}</div>

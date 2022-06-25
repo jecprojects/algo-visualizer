@@ -1,4 +1,4 @@
-.array-visuals-div {
+.bs-array-visuals-div {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,7 +15,7 @@
   gap: 3px;
 }
 
-.ele-div {
+.bs-ele-div {
   width: auto;
   height: 3rem;
   background-color: #14141a;
@@ -36,7 +36,7 @@
   gap: 3px;
 }
 
-.ar-top-ele-div {
+.bs-ar-top-ele-div {
   width: 4rem;
   height: 3rem;
   background-color: #bebfce;
@@ -56,7 +56,7 @@
   border-radius: 5px;
 }
 
-.compare-divs {
+.bs-compare-divs {
   background-color: #c4c262;
   animation: colorAnim 0.3s ease-out;
 }
@@ -70,7 +70,7 @@
   }
 }
 
-.swap-ele-div {
+.bs-swap-ele-div {
   position: relative;
   width: calc(8rem + 3px);
   height: 3rem;
@@ -81,25 +81,25 @@
   border-radius: 5px;
 }
 
-.swap-divs {
+.bs-swap-divs {
   background-color: #c4c262;
 }
 
-.swap-divs:nth-child(1) {
+.bs-swap-divs:nth-child(1) {
   position: absolute;
   left: 0;
-  -webkit-animation: leftBlock 1s ease-out;
-          animation: leftBlock 1s ease-out;
+  -webkit-animation: bsleftBlock 1s ease-out;
+          animation: bsleftBlock 1s ease-out;
 }
 
-.swap-divs:nth-child(2) {
+.bs-swap-divs:nth-child(2) {
   position: absolute;
   right: 0;
-  -webkit-animation: rightBlock 1s ease-out;
-          animation: rightBlock 1s ease-out;
+  -webkit-animation: bsrightBlock 1s ease-out;
+          animation: bsrightBlock 1s ease-out;
 }
 
-@-webkit-keyframes leftBlock {
+@-webkit-keyframes bsleftBlock {
   0% {
     left: calc(4rem + 3px);
     background-color: #c4c2628f;
@@ -110,7 +110,7 @@
   }
 }
 
-@keyframes leftBlock {
+@keyframes bsleftBlock {
   0% {
     left: calc(4rem + 3px);
     background-color: #c4c2628f;
@@ -121,7 +121,7 @@
   }
 }
 
-@-webkit-keyframes rightBlock {
+@-webkit-keyframes bsrightBlock {
   0% {
     right: calc(4rem + 3px);
     background-color: #c4c2628f;
@@ -132,7 +132,7 @@
   }
 }
 
-@keyframes rightBlock {
+@keyframes bsrightBlock {
   0% {
     right: calc(4rem + 3px);
     background-color: #c4c2628f;
@@ -143,11 +143,11 @@
   }
 }
 
-.passIndex-divs {
+.bs-passIndex-divs {
   background-color: #5cce6b;
 }
 
-.array-indexes{
+.bs-array-indexes{
   width: 100%;
   height: 1rem;
   display: flex;
@@ -155,7 +155,7 @@
   align-items: center;
   gap: 3px;
 }
-.array-indexes div{
+.bs-array-indexes div{
   width: 4rem;
   height: 1rem;
   display: flex;

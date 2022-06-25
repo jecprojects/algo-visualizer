@@ -82,11 +82,11 @@
 .is-update-div:nth-child(2) {
     position: absolute;
     right: 0;
-    -webkit-animation: leftBlock 0.6s ease-out;
-            animation: leftBlock 0.6s ease-out;
+    -webkit-animation: isleftBlock 0.6s ease-out;
+            animation: isleftBlock 0.6s ease-out;
   }
 
-  @-webkit-keyframes leftBlock {
+  @-webkit-keyframes isleftBlock {
     0% {
       right: calc(100% - 4rem);
       box-shadow: 4px 4px 5px  #00000080;
@@ -97,7 +97,7 @@
     }
   }
   
-  @keyframes leftBlock {
+  @keyframes isleftBlock {
     0% {
       right: calc(100% - 4rem);
       box-shadow: 4px 4px 5px  #17181c;

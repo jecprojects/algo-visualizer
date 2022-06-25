@@ -8,7 +8,7 @@ const BubbleSortVisuals = (props) => {
 
     useEffect(() => {
 
-        document.getElementById('array').innerHTML = ""; // Clearing the previous nodes
+        document.getElementById('bs-array').innerHTML = ""; // Clearing the previous nodes
         
         let i = 0;
         while(i<props.arr.length){
@@ -16,17 +16,17 @@ const BubbleSortVisuals = (props) => {
             if(props.compare && props.compare.includes(i)){ // coloring the compare divs
                 
                 let e = document.createElement('div');
-                e.classList.add('ele-div')
+                e.classList.add('bs-ele-div')
 
                 props.compare.map(indx => {
                     let eTop = document.createElement('div');
                     eTop.innerHTML = `${props.arr[indx]}`
-                    eTop.classList.add('ar-top-ele-div')
+                    eTop.classList.add('bs-ar-top-ele-div')
                     eTop.id = indx+1 
-                    eTop.classList.add('compare-divs')
+                    eTop.classList.add('bs-compare-divs')
 
                     e.appendChild(eTop)
-                    document.getElementById('array').appendChild(e);
+                    document.getElementById('bs-array').appendChild(e);
 
                     if(props.passIndexs && props.passIndexs.includes(indx)){ // coloring the passIndex divs
                         eTop.classList.add('passIndex-divs')
@@ -38,20 +38,20 @@ const BubbleSortVisuals = (props) => {
             }else if(props.swap && props.swap.includes(i)){ // coloring the swap divs
 
                 let e = document.createElement('div');
-                e.classList.add('swap-ele-div')
+                e.classList.add('bs-swap-ele-div')
 
                 props.swap.map(indx => {
                     let eTop = document.createElement('div');
                     eTop.innerHTML = `${props.arr[indx]}`
-                    eTop.classList.add('ar-top-ele-div')
+                    eTop.classList.add('bs-ar-top-ele-div')
                     eTop.id = indx+1 
-                    eTop.classList.add('swap-divs')
+                    eTop.classList.add('bs-swap-divs')
 
                     e.appendChild(eTop)
-                    document.getElementById('array').appendChild(e);
+                    document.getElementById('bs-array').appendChild(e);
 
                     if(props.passIndexs && props.passIndexs.includes(indx)){ // coloring the passIndex divs
-                        eTop.classList.add('passIndex-divs')
+                        eTop.classList.add('bs-passIndex-divs')
                     }
                 })
 
@@ -60,17 +60,17 @@ const BubbleSortVisuals = (props) => {
                 let e = document.createElement('div');
                 let eTop = document.createElement('div');
     
-                e.classList.add('ele-div')
+                e.classList.add('bs-ele-div')
                 eTop.innerHTML = `${props.arr[i]}`
                 
-                eTop.classList.add('ar-top-ele-div')
+                eTop.classList.add('bs-ar-top-ele-div')
                 eTop.id = i+1 
 
                 e.appendChild(eTop)
-                document.getElementById('array').appendChild(e);
+                document.getElementById('bs-array').appendChild(e);
 
                 if(props.passIndexs && props.passIndexs.includes(i)){ // coloring the passIndex divs
-                    eTop.classList.add('passIndex-divs')
+                    eTop.classList.add('bs-passIndex-divs')
                 }
 
                 i = i+1;
@@ -82,8 +82,8 @@ const BubbleSortVisuals = (props) => {
 
     return(
         <>
-            <div id="array" className="array-visuals-div"></div>
-            <div className="array-indexes">
+            <div id="bs-array" className="bs-array-visuals-div"></div>
+            <div className="bs-array-indexes">
                 {
                     props.arr.map((value, key) => {
                         return<div>{key}</div>

@@ -70,18 +70,18 @@
   .ss-swap-ele:nth-child(1) {
     position: absolute;
     left: 0;
-    -webkit-animation: leftBlock 1s ease-out;
-            animation: leftBlock 1s ease-out;
+    -webkit-animation: ssleftBlock 1s ease-out;
+            animation: ssleftBlock 1s ease-out;
     
   }
   
   .ss-swap-ele:nth-child(2) {
     position: absolute;
     right: 0;
-    -webkit-animation: rightBlock 1s ease-out;
-            animation: rightBlock 1s ease-out;
+    -webkit-animation: ssrightBlock 1s ease-out;
+            animation: ssrightBlock 1s ease-out;
   }
-  @-webkit-keyframes leftBlock {
+  @-webkit-keyframes ssleftBlock {
     0% {
       left:-webkit-calc(100% - 4rem);
       left:-moz-calc(100% - 4rem);
@@ -94,7 +94,7 @@
     }
   }
   
-  @keyframes leftBlock {
+  @keyframes ssleftBlock {
     0% {
       left:-webkit-calc(100% - 4rem);
       left:-moz-calc(100% - 4rem);
@@ -107,7 +107,7 @@
     }
   }
   
-  @-webkit-keyframes rightBlock {
+  @-webkit-keyframes ssrightBlock {
     0% {
       right:-webkit-calc(100% - 4rem);
       right:-moz-calc(100% - 4rem);
@@ -120,7 +120,7 @@
     }
   }
   
-  @keyframes rightBlock {
+  @keyframes ssrightBlock {
     0% {
       right:-webkit-calc(100% - 4rem);
       right:-moz-calc(100% - 4rem);
@@ -143,4 +143,21 @@
   }
   .passIndex-divs {
     background-color: #5cce6b;
+  }
+
+  .ss-array-indexes{
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+  }
+  .ss-array-indexes div{
+    width: 4rem;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3d3d4e;
   }
