@@ -6,6 +6,8 @@ import LeftBar from "../leftbar";
 import MiddleBar from "../middlebar";
 import RightBar from "../rightbar";
 import Header from "../header";
+import Footer from "../footer/footer";
+
 
 /* Styles and Icons */
 import './style.css';
@@ -27,6 +29,7 @@ const Layout = (props) => {
                         <MiddleBar/>
                         <RightBar/>
                     </div>
+                    <Footer/>
                 </div>
                 :
                 props.children

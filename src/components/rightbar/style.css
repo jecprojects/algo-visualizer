@@ -4,6 +4,7 @@
     /* background-color: #1f2025; */
     padding: 1rem 1.5rem;
     border-radius: 5px;
+    user-select: none;
 }
 .link-heading-div{
     display: flex;

@@ -139,8 +139,8 @@ const InsertionSortVisuals = (props) => {
             <div className="key-ele-div">
                 {
                     props.keyElm && <>
-                            <h3>Key Element:</h3>
                             <div id='keyNodeID' className="key-div">{props.keyElm}</div>
+                            <h3>Key Element</h3>
                         </>
                 }
             </div>

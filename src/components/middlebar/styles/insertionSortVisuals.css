@@ -111,11 +111,13 @@
 
   .key-ele-div{
     width: 100%;
-    height: 5rem;
+    height: 7rem;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
+    margin-top: 2rem;
   }
   .key-ele-div h3{
     color: #fff;

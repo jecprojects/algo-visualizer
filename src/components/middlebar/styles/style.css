@@ -3,6 +3,7 @@
     width: 48%;
     height: auto;
     padding: 0 1rem;
+    user-select: none;
 }
 .middlebar-main-div span{
     position: absolute;
