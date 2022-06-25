@@ -11,7 +11,10 @@
 
 .f-main-div{
     display: flex;
-    width: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .footer-div-heading{
@@ -22,17 +25,17 @@
 
 .footer-div-heading h3{
     color: #646c80;
-    font-size: 14px;
+    font-size: 18px;
     font-family: "Poppins", sans-serif;
     text-transform: uppercase;
     font-weight: 300;
     font-style: italic;
-    margin-right: 2rem;
-    text-decoration: underline;
 }
 
 .paper-links{
     height: 50%;
+    width: 100%;
+    text-align: center;
 }
 
 .paper-links a{
@@ -42,7 +45,6 @@
     font-weight: 300;
     font-style: italic;
     text-decoration: none;
-    margin-right: 1rem;
     text-transform: uppercase;
     text-decoration: underline;
 
