@@ -68,7 +68,7 @@ const InsertionSortVisuals = (props) => {
 
                 i++;
             }
-        }else if(props.toBeSwap){
+        }else if(props.toBeSwap != null){
             while(i<props.arr.length){
                 let e = document.createElement('div');
                 let eTop = document.createElement('div');
@@ -77,12 +77,16 @@ const InsertionSortVisuals = (props) => {
                 eTop.innerHTML = `${props.arr[i]}`
     
                 eTop.classList.add('is-ar-top-ele-div')
-                eTop.id = i+1
+
+                if(i === props.toBeSwap){
+                    eTop.setAttribute('id', 'targetNodeID');
+                }else{
+                    eTop.id = i+1
+                }
     
                 e.appendChild(eTop)
     
                 document.getElementById('is-array').appendChild(e);
-
 
                 if(props.swap && props.swap.includes(i)){ // coloring the swap div
                     eTop.classList.add('is-swap-divs')
@@ -132,7 +136,7 @@ const InsertionSortVisuals = (props) => {
                 {
                     props.keyElm && <>
                             <h3>Key Element:</h3>
-                            <div className="key-div">{props.keyElm}</div>
+                            <div id='keyNodeID' className="key-div">{props.keyElm}</div>
                         </>
                 }
             </div>

@@ -87,10 +87,7 @@ const InsertionSort = (data, steps) => {
         },
         {
             arr: [...arr],
-            text: `Highlighted green records to the left are always sorted. 
-            We begin with the record in position 0 in the sorted portion, 
-            and we will be moving the record in position 1 (in blue) to the 
-            left until it is sorted.`,
+            text: `Each time compareing and updating are shown in orange color. and key element replacing is shown by blue color.`,
             toBeSwap: null,
             swap: [],
             update: [],

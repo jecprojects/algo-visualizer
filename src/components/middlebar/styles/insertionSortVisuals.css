@@ -143,6 +143,19 @@
             user-select: none;
     border-radius: 5px;
   }
+
+  #targetNodeID{
+    background-color: #5b63d6;
+    -webkit-animation: drop 0.3s ease-out;
+            animation: drop 0.3s ease-out;
+  }
+  @keyframes drop {
+    0%{
+      margin-top: 2rem;
+    }100%{
+      margin-top: 0rem;
+    }
+  }
   
   .array-indexes{
     width: 100%;

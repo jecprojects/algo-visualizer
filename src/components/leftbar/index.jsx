@@ -9,7 +9,7 @@ const LeftBar = (props) => {
   const location = useLocation()
 
   const [bruteForce, setBruteForce] = useState(false);
-  const [greedy, setGreedy] = useState(false);
+  const [graph, setGraph] = useState(false);
   const [divideAndC, setDivideAndC] = useState(false);
 
   const [selectedAlgo, setSelectedAlgo] = useState(location.pathname);
@@ -61,11 +61,39 @@ const LeftBar = (props) => {
           null
         }
 
-        <div onClick={e => setGreedy(!greedy)} className="sidebar-individua-content">
-          <label>Greedy</label>
-          { greedy ? <span><FiChevronDown/></span> : <span><FiChevronRight/></span> }
+        <div onClick={e => setGraph(!graph)} className="sidebar-individua-content">
+          <label>Graph</label>
+          { graph ? <span><FiChevronDown/></span> : <span><FiChevronRight/></span> }
         </div>
 
+        {
+          graph ? 
+            <div className="sidebar-individua-sub-content-main-div">
+
+              {/* For Bubble sort Tab */}
+              <div className="sidebar-individua-sub-content">
+                <NavLink 
+                  id="bubblesort"
+                  className={selectedAlgo === "/bfs" ? "selected" : "nav-link"}
+                  to={"/bfs"}>
+                    BFS
+                </NavLink>
+              </div>
+
+              {/* For Bubble Sort Tab */}
+              <div className="sidebar-individua-sub-content">
+                <NavLink 
+                  to={"/dfs"}
+                  className={selectedAlgo === "/dfs" ? "selected" : "nav-link"}
+                  >
+                    DFS
+                </NavLink>
+              </div>
+            </div>
+
+          :
+          null
+        }
 
         <div onClick={e => setDivideAndC(!divideAndC)} className="sidebar-individua-content">
           <label>Divide and Conquer</label>

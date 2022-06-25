@@ -19,6 +19,8 @@ function App() {
           <Route path="/selection-sort" element={<SelectionSort />} />
           <Route path="/insertion-sort" element={<InsertionSort />} />
           <Route path="/bubble-sort" element={<BubbleSort />} />
+          <Route path="/bfs" element={<SelectionSort />} />
+          <Route path="/dfs" element={<InsertionSort />} />
         </Routes>
       </BrowserRouter>
     </div>
